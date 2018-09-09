@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+
+%Packages add more power to LaTeX documents
+\usepackage{fullpage} %Otherwise there will be a lot of wasted space at the margins
+\usepackage{enumerate} %For the multi-part problem in example #4
+\usepackage{amsthm} %For proof environment
+\usepackage{amsmath} %For math symbols (like the black square)
+\usepackage{graphicx,float,wrapfig} %Including graphics like PDFs and some image formats.
+
+\author{Garrett Hay}
+\title{CSCI 430: Homework 1}
+
+
+\begin{document}
+\maketitle
+
+\section*{2.1-1}
+\noindent
+
+%Number \item tags
+\begin{enumerate}
+  %Propositional logic examples
+  % The $$ symbols are used to specify mathematics inline.
+  \item $ \lnot (p \land q) \rightarrow (\top \lor \bot) $
+
+    %First-order logic examples
+  \item  $\forall$ x $\in$ X, $\exists$ y$\in$ Y s.t. A(x) $\rightarrow$ B(y)
+    
+  \item A truth table:
+    
+    \begin{tabular}{| c | c | c | c | c | c |} %Specifies a table with three centered columns
+      \hline %horizontal line
+      31 & 41 & 59 & 26 & 41 & 58 \\
+      31 & 41 & 59 & 26 & 41 & 58 \\
+      31 & 41 & 59 & 26 & 41 & 58 \\
+      26 & 31 & 41 & 59 & 41 & 58 \\
+      26 & 31 & 41 & 41 & 59 & 58 \\
+      26 & 31 & 41 & 41 & 58 & 59 \\
+      \hline
+    \end{tabular}
+    
+    \section*{2.1-2}
+    \noindent
+    For j=2 to A.length\\
+    	key = A[j]\\
+    	i = j-1\\
+    	while (i>0) && (A[i]<key)\\
+     		A[i+1] = A[i]\\
+     		i = i-1\\
+     	A[i+1] = key\\
+    \section{2.1-3}
+    \noindent
+    locate = 0\\
+    For i=1 to A.length\\
+    	if(A[i] == v)\\
+    		locate = i\\
+    if{locate == 0)\\
+    	print "NIL"\\
+    else:\\
+    	print(locate)\\
+    \\
+    \subsection*{Initialization:}
+    Show that 'locate', the variable that will hold the location of 'v' in the array, is 0. A number nonexistent in A[1...n].
+    \subsection*{Maintenance:}
+    Show that the loop maintains. The body of the loop checks if A[1], A[2], and so on by 1 position to see if the current element is the same as the value of 'v' until A[n]. When an element satisfies the condition if changes 'locate' to the location in the array.
+    \subsection*{Termination:}
+    Condition of for loop termination is that 'i' > A.length/n. Because each iterator increase by 1, we must have i=(n+1) at that time. Substituting 'i' for (n+1) in the loop we have either 'locate' is 0 or the 'i' were A[i] is equal to 'v' in A[1-n]. Then the if-else statement decides if 'locate' is 0 to print "NIL" or to print the location of v in A[]. Hence the algorithm is correct.
+    \section{2.1-4}
+    \subsection*{Formal:}
+    Input: 2 binary numbers, A and B, represented by A[0...n] and B[0...n] in binary form\\
+    Output: Binary number C[0...(N+1)] where C = A+B.
+    \subsection*{Pseudo:}
+    int carry = 0\\
+    for( i=A.length to 0); (-=1)\\
+    	added = A[i] + B[i] + carry\\
+    	C[i+1] = added\%2\\
+    	carry = added/2\\
+    C[0] = carry\\
+    % The \\ signals a newline.
+  %\item The following is a finite state automaton typeset with graphviz:\\
+    %\includegraphics[width=10cm]{fsa_even.pdf}
+    
+\end{enumerate}
+    
+\end{document}
