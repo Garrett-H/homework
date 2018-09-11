@@ -8,6 +8,7 @@
 \usepackage{graphicx,float,wrapfig} %Including graphics like PDFs and some image formats.
 \usepackage{algorithm}
 \usepackage{algorithmic}
+\usepackage{xcolor}
 
 \author{Garrett Hay}
 \title{CSCI 430: Homework 1}
@@ -20,19 +21,23 @@
 \noindent    
 \begin{tabular}{| c | c | c | c | c | c |}
       \hline
-      31 & 41 & 59 & 26 & 41 & 58 \\
+      31 & \textcolor{red}{41} & 59 & 26 & 41 & 58 \\
       \hline
-      31 & 41 & 59 & 26 & 41 & 58 \\
+      31 & 41 & \textcolor{red}{59} & 26 & 41 & 58 \\
       \hline
-      31 & 41 & 59 & 26 & 41 & 58 \\
+      31 & 41 & 59 & \textcolor{red}{26} & 41 & 58 \\
       \hline
-      26 & 31 & 41 & 59 & 41 & 58 \\
+      \textcolor{blue}{26} & \textcolor{blue}{31} & \textcolor{blue}{41}
+      	& \textcolor{blue}{59} & \textcolor{red}{41} & 58 \\
       \hline
-      26 & 31 & 41 & 41 & 59 & 58 \\
+      26 & 31 & 41 & \textcolor{blue}{41} & \textcolor{blue}{59}
+      	& \textcolor{red}{58} \\
       \hline
-      26 & 31 & 41 & 41 & 58 & 59 \\
+      26 & 31 & 41 & 41 & \textcolor{blue}{58} & \textcolor{blue}{59} \\
       \hline
 \end{tabular}
+\\ \textcolor{blue}{Blue} = If moved\\
+\textcolor{red}{Red} = Next to be sorted
     
 \section*{2.1-2}
 \begin{algorithm}
